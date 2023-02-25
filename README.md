@@ -1,5 +1,30 @@
-# Sort
+### Init
 
+```java
+List<> list = new ArrayList<>();
+Set<> set = new HashSet<>();
+```
+
+
+
+
+# IO
+
+# Array and Strings
+
+### maxPorfit
+
+> Time Limit Exceeded:
+
+差价找最大
+
+## 3Sum
+三数之和先排序
+```java
+Arrays.sort(nums);
+```
+
+# Sort
 ## mid
 
 ```java
