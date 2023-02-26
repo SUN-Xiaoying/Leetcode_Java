@@ -38,7 +38,6 @@ public class Overlap {
         return head;
     }
 
-
     public static void main(String[] args) throws IOException {
         // input
         ListNode head1=create();
