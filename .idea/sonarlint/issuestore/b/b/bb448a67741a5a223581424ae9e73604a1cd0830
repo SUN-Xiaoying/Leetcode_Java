@@ -1,0 +1,5 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îõƒ
+w
+java:S1845"\Rename method "reverseList" to prevent any misunderstanding/clash with method "ReverseList".(ı¥ÿıÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïİ›Àùÿÿÿÿ

@@ -6,7 +6,7 @@
 - 求差滑滑梯
 - 查重找哈希
 
-## 链表
+## 1. 链表
 ### 入环
 - 快慢指针
   1. 相遇, 快指针从头慢慢来
@@ -16,6 +16,16 @@
 1. 短的放进HashSet
 2. 统计长度，长的先走
 
+### Palindrome
+1. stack, 遍历两遍 (extra space)
+2. 回文，快慢再逆序 (no extra space)
+
+---
+
+## 2. String
+### ({})
+1. 不用栈，一个变量搞定
+
 ### Init
 
 ```java
@@ -23,6 +33,7 @@ List<> list = new ArrayList<>();
 Set<> set = new HashSet<>();
 ```
 
+---
 
 # IO
 
@@ -42,6 +53,9 @@ Arrays.sort(nums);
 
 # Sort
 ## mid
+
+1. `L + R` Overflow Warning
+2. Shift is the fastest
 
 ```java
     mid=left+((right-left)>>1)

@@ -1,10 +1,12 @@
 package klarna;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Transaction {
     String name, city;
     int time, amount;
+
     public Transaction(String strS) {
         String[] str = strS.split(",");
         this.name = str[0];

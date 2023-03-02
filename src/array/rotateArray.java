@@ -8,7 +8,7 @@ public class rotateArray {
         int k = 2;
         rotate(nums, k);
 
-        for(int num: nums){
+        for (int num : nums) {
             System.out.print(num);
         }
     }
@@ -17,16 +17,16 @@ public class rotateArray {
 
         // Arrays Out of Bound
         int pos = k % nums.length;
-        reverse(nums, 0, nums.length-1);
-        reverse(nums, 0, pos-1);
-        reverse(nums, pos, nums.length-1);
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, pos - 1);
+        reverse(nums, pos, nums.length - 1);
     }
 
     public static void reverse(int[] nums, int i, int j) {
-        while(i<j){
-            nums[i] = nums[i]^nums[j];
-            nums[j] = nums[i]^nums[j];
-            nums[i] = nums[i]^nums[j];
+        while (i < j) {
+            nums[i] = nums[i] ^ nums[j];
+            nums[j] = nums[i] ^ nums[j];
+            nums[i] = nums[i] ^ nums[j];
             i++;
             j--;
         }
