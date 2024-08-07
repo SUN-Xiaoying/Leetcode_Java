@@ -13,37 +13,37 @@ public class Sum3 {
         }
     }
 
-    public List<List<Integer>> threeSum(int[] nums) {
-        // 三数之和先排序
-        Arrays.sort(nums);
+    // public List<List<Integer>> threeSum(int[] nums) {
+    //     // 三数之和先排序
+    //     Arrays.sort(nums);
 
-        List<List<Integer>> results = new ArrayList<>();
-        Set<List<Integer>> set = new HashSet<>();
+    //     List<List<Integer>> results = new ArrayList<>();
+    //     Set<List<Integer>> set = new HashSet<>();
 
-        for (int i = 0; i < nums.length - 2; i++) {
-            int j = i + 1;
-            int k = nums.length - 1;
+    //     for (int i = 0; i < nums.length - 2; i++) {
+    //         int j = i + 1;
+    //         int k = nums.length - 1;
 
-            while (j < k) {
-                int sum = nums[i] + nums[j] + nums[k];
+    //         while (j < k) {
+    //             int sum = nums[i] + nums[j] + nums[k];
 
-                if (sum < 0) {
-                    j++;
-                } else if (sum == 0) {
-                    set.add(List.of(nums[i], nums[j], nums[k]));
-                    j++;
-                    k--;
-                } else {
-                    k--;
-                }
-            }
-        }
+    //             if (sum < 0) {
+    //                 j++;
+    //             } else if (sum == 0) {
+    //                 set.add(List.of(nums[i], nums[j], nums[k]));
+    //                 j++;
+    //                 k--;
+    //             } else {
+    //                 k--;
+    //             }
+    //         }
+    //     }
 
-        // 查重用Hash
-        results.addAll(set);
+    //     // 查重用Hash
+    //     results.addAll(set);
 
-        return results;
-    }
+    //     return results;
+    // }
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
