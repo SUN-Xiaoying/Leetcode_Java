@@ -8,10 +8,24 @@
 |Flip Matrix|翻转矩阵||
 |quadrant|象限||
 
+Two-dimensional dynamic programming from recursion
+
 
 # Init
 
 ## LIST
+
+### Java 8
+
+```java
+int[][] dp = new int[rows][cols];
+
+public static int[] DURATION = {1,3,7};
+
+Arrays.fill(dp, Integer.MAX_VALUE);
+```
+
+### Java 15
 ```java
   List<> list = new ArrayList<>();
 
@@ -53,7 +67,13 @@ Intiate Matrix in a brutal way
 
 ```
 
+
 ## MinMax
+
+|||
+|----|----|
+|max|`Integer.MAX_VALUE`|
+|min|`Integer.MIN_VALUE`|
 
 ```java
     // Initialize max with the smallest possible integer value
@@ -81,6 +101,9 @@ Intiate Matrix in a brutal way
 # SUM
 
 ## Sum of the List
+
+### Java 15
+
 ```java
 List<Integer> ar
 int sum = ar.stream().mapToInt(Integer::intValue).sum();
@@ -91,7 +114,11 @@ int sum = ar.stream().mapToInt(Integer::intValue).sum();
 List<Long> ar
 long sum = ar.stream().mapToLong(Long::longValue).sum();
 ```
+### Java 8
 
+```java
+Arrays.stream(dp).sum();
+```
 
 
 
@@ -99,11 +126,13 @@ long sum = ar.stream().mapToLong(Long::longValue).sum();
 
 |Sign|Math|
 |---|---|
+|recursive|递归|
 |adjacent|邻接|
 |square| `Math.sqrt()`|
 |factorial|阶乘 |
 |diagonal|对角线|
 |`int remainder = dividend % divisor;`|取余|
+
 
 
 ```java
@@ -175,6 +204,7 @@ Map find the most frequent number in a list
 
 
 
+
 # String
 
 ||||
@@ -205,7 +235,15 @@ Map find the most frequent number in a list
 ```
 
 
-# MaxMin
+# LOOP
+
+## FOR
+
+for define more than one iteators
+
+```java
+    for(int i=0, j=0; i<3; i++)
+```
 
 # Sort
 
@@ -260,8 +298,8 @@ I J I
     }
 ```
 
-# 2. LinkedList
-## 2.1 reverse
+# LinkedList
+## REVERSE
 ```java
     public ListNode reverse(ListNode head){
         //basecase
@@ -281,7 +319,7 @@ I J I
     }
 ```
 
-## 2.2 isPail
+## isPail
 
 `right!=null || fast!=null`, or NullPointerException Warning.
 
