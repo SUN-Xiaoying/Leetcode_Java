@@ -5,7 +5,7 @@ import java.util.Stack;
 public class Palindrome {
 
     public static void main(String[] args) {
-        String str = "A man, a plan, a canal: Panama";
+        // String str = "A man, a plan, a canal: Panama";
         String str1 = ",,,,,,,,,,,,acva";
         System.out.println(isPalindrome(str1));
     }
