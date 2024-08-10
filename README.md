@@ -1,10 +1,66 @@
 
+||||
+|----|----|----|
+|2D square|正方形||
+|3D cube|立方体|`Surface area=6×s^2`|
+|rectangular prism|四棱柱|`Surface area=2lw+2lh+2wh`|
+|-|四棱柱|`Volume=l×w×h`|
+|Flip Matrix|翻转矩阵||
+|quadrant|象限||
+
 
 # Init
 
+## LIST
 ```java
   List<> list = new ArrayList<>();
+
+   // Add some elements to the list
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+```
+
+Initiate with specfic column size
+
+```java
     List<List<Integer>> matrix = new ArrayList<>();
+    for (int i = 0; i < colSize; i++) {
+        flipped.add(new ArrayList<>()); // Initialize each column with an empty list
+    }
+```
+
+
+
+```java
+    List<StringBuilder> columnList = new ArrayList<>();
+    for(int j=0; j<colInt; j++){
+        columnList.add(new StringBuilder());
+    }
+```
+
+
+Intiate Matrix in a brutal way
+
+```java
+    List<List<Integer>> A = new ArrayList<>();
+
+    // Use Arrays.asList to create the inner lists
+    A.add(Arrays.asList(1, 3, 4));
+    A.add(Arrays.asList(2, 2, 3));
+    A.add(Arrays.asList(1, 2, 4));
+
+```
+
+## MinMax
+
+```java
+    // Initialize max with the smallest possible integer value
+    int max = Integer.MIN_VALUE;
+```
+
+```java
 
   Set<> set = new HashSet<>();
 
@@ -22,11 +78,28 @@
     }
 
 ```
+# SUM
+
+## Sum of the List
+```java
+List<Integer> ar
+int sum = ar.stream().mapToInt(Integer::intValue).sum();
+```
+
+
+```java
+List<Long> ar
+long sum = ar.stream().mapToLong(Long::longValue).sum();
+```
+
+
+
 
 # MATH
 
 |Sign|Math|
 |---|---|
+|adjacent|邻接|
 |square| `Math.sqrt()`|
 |factorial|阶乘 |
 |diagonal|对角线|
@@ -74,8 +147,15 @@ Map find the most frequent number in a list
 |----|----|----|
 |double|int|`int intValue = (int) doubleValue;`|
 |String|int|`int number = Integer.parseInt(numberStr);`|
-|`List<Integer> ar`|`int sum`|```ar.stream().mapToInt(Integer::intValue).sum();```|
-|`List<Long> ar`|`long sum`|```ar.stream().mapToLong(Long::longValue).sum();```|
+
+## Matrx to List
+
+```java
+    List<Integer> numbers = A.stream()
+                            .flatMap(List::stream)  
+                            .collect(Collectors.toList());
+
+```
 
 ## Map to List
 
@@ -99,9 +179,9 @@ Map find the most frequent number in a list
 
 ||||
 |---|---|----|
-||`str.substring(start , end);` |endPosition=str.length() by default|
-||`str.indexOf(charValue);`||
-||`str.charAt(index);` |not `getChar`|
+|子串|`str.substring(start , end);` |endPosition=str.length() by default|
+|取数|`str.indexOf(charValue);`||
+|取字|`str.charAt(index);` |not `getChar`|
 
 ## SubString
 ```java

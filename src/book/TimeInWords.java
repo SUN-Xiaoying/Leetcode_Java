@@ -39,11 +39,6 @@ public class TimeInWords {
         // Normalize the input string (e.g., trim, lowercase)
         word = word.trim().toLowerCase();
         
-        // // Special case for "o' clock"
-        // if (word.equals("o' clock")) {
-        //     return 0;
-        // }
-        
         // Find the index of the word in the array
         for (int i = 0; i < NUM_IN_WORDS.length; i++) {
             if (NUM_IN_WORDS[i].equals(word)) {
