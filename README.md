@@ -1,5 +1,5 @@
 
-||||
+|trie|前缀树|prefix/dictionary tree|
 |----|----|----|
 |2D square|正方形||
 |3D cube|立方体|`Surface area=6×s^2`|
@@ -7,6 +7,7 @@
 |-|四棱柱|`Volume=l×w×h`|
 |Flip Matrix|翻转矩阵||
 |quadrant|象限||
+|partial|局部|partial search|
 
 Two-dimensional dynamic programming from recursion
 
@@ -20,9 +21,14 @@ Two-dimensional dynamic programming from recursion
 ```java
 int[][] dp = new int[rows][cols];
 
-public static int[] DURATION = {1,3,7};
+int[] DURATION = {1,3,7};
+```
 
+Use Arrays
+
+```java
 Arrays.fill(dp, Integer.MAX_VALUE);
+Arrays.fill(dp, 0, n, Integer.MAX_VALUE);
 ```
 
 ### Java 15
@@ -45,7 +51,7 @@ Initiate with specfic column size
     }
 ```
 
-
+Flipping Matrix
 
 ```java
     List<StringBuilder> columnList = new ArrayList<>();
@@ -67,19 +73,6 @@ Intiate Matrix in a brutal way
 
 ```
 
-
-## MinMax
-
-|||
-|----|----|
-|max|`Integer.MAX_VALUE`|
-|min|`Integer.MIN_VALUE`|
-
-```java
-    // Initialize max with the smallest possible integer value
-    int max = Integer.MIN_VALUE;
-```
-
 ```java
 
   Set<> set = new HashSet<>();
@@ -87,6 +80,8 @@ Intiate Matrix in a brutal way
   Map<Integer, Integer> map = new HashMap<>();
 
 ```
+### BigInteger
+
   Factorials of n>20 cannot be stored even in a 64-bit long long variable. BigIntger must be used.
 
 ```java
@@ -96,11 +91,52 @@ Intiate Matrix in a brutal way
             factorial = factorial.multiply(BigInteger.valueOf(i));
         }
     }
-
 ```
+
+## MinMax
+
+|||
+|----|----|
+|int|`Integer.MAX_VALUE`|
+|-|`Integer.MIN_VALUE`|
+|BigInteger|`BigInteger.ONE`|
+
+```java
+    // Initialize max with the smallest possible integer value
+    int max = Integer.MIN_VALUE;
+```
+
+
 # SUM
 
+# ARRAY
+
+||`Arrays.asList()`|
+|----|----|
+||`Arrays.sort()`|
+||`Arrays.fill()`|
+||`Arrays.stream(dp).sum()`|
+
+## Sort
+
+```java
+    List<Integer> arr;
+    Collections.sort(arr);
+
+    // Sort the list in descending order
+    Collections.sort(arr, Collections.reverseOrder());
+```
+
+
+
 ## Sum of the List
+
+### Java 8
+
+```java
+int[] dp = new int[size];
+Arrays.stream(dp).sum();
+```
 
 ### Java 15
 
@@ -114,11 +150,7 @@ int sum = ar.stream().mapToInt(Integer::intValue).sum();
 List<Long> ar
 long sum = ar.stream().mapToLong(Long::longValue).sum();
 ```
-### Java 8
 
-```java
-Arrays.stream(dp).sum();
-```
 
 
 
@@ -132,11 +164,11 @@ Arrays.stream(dp).sum();
 |factorial|阶乘 |
 |diagonal|对角线|
 |`int remainder = dividend % divisor;`|取余|
+|The `k`th Factor of n| `k` 因数 / 因子|
 
 
 
 ```java
-
 
 Math.floor() <= i <= Math.ceil();
 ```
@@ -145,29 +177,31 @@ Math.floor() <= i <= Math.ceil();
 
 # MAP
 
-Map find the most frequent number in a list
+Find the most frequent number in a list
 
 ```java
-    Map<Integer, Integer> frequencyMap = new HashMap<>();
-        
-    // Count the frequency of each number
-    for (Integer number : list) {
-        frequencyMap.put(number, frequencyMap.getOrDefault(number, 0) + 1);
-    }
+     List<Integer> numbers = Arrays.asList(1, 3, 2, 3, 4, 2, 3, 2, 2, 4, 4, 4); // Example list of numbers
 
-    Integer mostFrequentNumber = null;
-    int maxFrequency = 0;
+        // Use a HashMap to store the frequency of each number
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
 
-    for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
-        Integer number = entry.getKey();
-        Integer frequency = entry.getValue();
-        if (frequency > maxFrequency) {
-            maxFrequency = frequency;
-            mostFrequentNumber = number;
+        for (int num : numbers) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
         }
-    }
 
-    return mostFrequentNumber;
+        // Find the most frequent number
+        int mostFrequent = -1;
+        int maxCount = -1;
+
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            if (entry.getValue() > maxCount) {
+                mostFrequent = entry.getKey();
+                maxCount = entry.getValue();
+            }
+        }
+
+        // Output the most frequent number
+        System.out.println("The most frequent number is: " + mostFrequent);
 ```
 
 # Transform
@@ -212,10 +246,18 @@ Map find the most frequent number in a list
 |子串|`str.substring(start , end);` |endPosition=str.length() by default|
 |取数|`str.indexOf(charValue);`||
 |取字|`str.charAt(index);` |not `getChar`|
+|Discompose|`str.toCharArray()`|
 
 ## SubString
 ```java
     str.substring( startPosition, endPosition );
+```
+
+```java
+    if (subString.contains(String.valueOf(c))) { // Check if subString contains the character c
+        subString = String.valueOf(c); // Assign the character to subString
+        result++; // Increment the result counter
+    }
 ```
 
 
@@ -242,7 +284,16 @@ Map find the most frequent number in a list
 for define more than one iteators
 
 ```java
-    for(int i=0, j=0; i<3; i++)
+    for(int i=0, j=0; i<m && j<n ; i++){
+
+    }
+```
+
+char in String
+```java
+        for(char c: s.toCharArray())｛
+        
+        }
 ```
 
 # Sort
