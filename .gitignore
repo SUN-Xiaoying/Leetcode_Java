@@ -11,14 +11,24 @@
 apitests/.settings/
 apitests/.classpath
 apitests/.project
+project/project/
+project/target/
 
-### Gradle
-build
-.gradle
+# Log files
+*.log
 
-# Gradle GUI config
-gradle-app.setting
+# Package files
+*.jar
 
+# Maven
+target/bt
+dist/
+
+# JetBrains IDE
+.idea/
+out/
+target/
+*/target/
 ### JIRA plugin
 atlassian-ide-plugin.xml
 
