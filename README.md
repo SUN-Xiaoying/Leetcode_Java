@@ -11,6 +11,12 @@
 
 Two-dimensional dynamic programming from recursion
 
+|Structure|-|Rule|
+|----|----|----|
+|Queue|队列|First In, First Out|
+|Stack|栈|First In, Last Out|
+|LinkedList|链表||
+|Binary Tree|二叉树||
 
 # Init
 
@@ -374,6 +380,9 @@ I J I
 
 `right!=null || fast!=null`, or NullPointerException Warning.
 
+# ASCII
+
+There are extended ASCII tables (often referred to as ISO-8859-1 or other code pages) that extend this to **256** characters (values 0 to 255), but the standard ASCII table itself is limited to **128** values.
 
 # 葵花宝典
 
