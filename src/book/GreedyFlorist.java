@@ -1,8 +1,6 @@
 package book;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class GreedyFlorist {
     static int getMinimumCost(int k, int[] c) {

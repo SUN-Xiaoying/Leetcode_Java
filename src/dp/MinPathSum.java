@@ -1,4 +1,4 @@
-package book.dp;
+package dp;
 
 class MinPathSum {
     public int minPathSum(int[][] grid) {

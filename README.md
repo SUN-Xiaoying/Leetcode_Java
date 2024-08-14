@@ -3,20 +3,81 @@
 |----|----|----|
 |2D square|正方形||
 |3D cube|立方体|`Surface area=6×s^2`|
-|rectangular prism|四棱柱|`Surface area=2lw+2lh+2wh`|
+|Rectangular prism|四棱柱|`Surface area=2lw+2lh+2wh`|
 |-|四棱柱|`Volume=l×w×h`|
 |Flip Matrix|翻转矩阵||
-|quadrant|象限||
-|partial|局部|partial search|
+|Quadrant|象限||
+|Partial|局部|partial search|
+|Palindrome|回文|
+|Deformity|变形|
+|||
 
 Two-dimensional dynamic programming from recursion
 
-|Structure|-|Rule|
-|----|----|----|
-|Queue|队列|First In, First Out|
-|Stack|栈|First In, Last Out|
+|Sign|Math|
+|---|---|
+|recursive|递归|
+|adjacent|邻接|
+|square| `Math.sqrt()`|
+|factorial|阶乘 |
+|diagonal|对角线|
+|`int remainder = dividend % divisor;`|取余|
+|The `k`th Factor of n| `k` 因数 / 因子|
+|evenly divide|整除|
+
+## Structure
+
+|Structure|-|Rule||
+|----|----|----|----|
+|Queue|队列|First In, First Out||
+|Stack|栈|First In, Last Out||
 |LinkedList|链表||
 |Binary Tree|二叉树||
+
+BT
+```java
+
+```
+
+Stack
+```java
+Stack<Integer> stack = new Stack<>();
+stack.push(10);
+
+// Retrieve the top element of the stack without removing it.
+stack.peek();
+
+// Retrieve the top element of the stack and REMOVE it.
+stack.pop();
+
+stack.isEmpty();
+
+```
+
+Queue
+
+```java
+Queue<Integer> queue = new LinkedList<>();
+
+// Elements will be ordered in natural order (ascending for numbers)
+Queue<Integer> queue = new PriorityQueue<>();
+
+
+queue.offer(10);
+queue.peek();
+queue.poll();
+queue.isEmpty();
+```
+
+Deque
+
+```java
+  public Deque<Integer> deque = new LinkedList<>();
+
+  deque.offerFirst();
+  deque.offerLast();
+```
+
 
 # Init
 
@@ -91,6 +152,7 @@ Intiate Matrix in a brutal way
   Factorials of n>20 cannot be stored even in a 64-bit long long variable. BigIntger must be used.
 
 ```java
+
   public static void extraLongFactorials(int n) {
         BigInteger factorial = BigInteger.ONE; // Start with 1
         for(int i=2; i<=n; i++){
@@ -106,6 +168,7 @@ Intiate Matrix in a brutal way
 |int|`Integer.MAX_VALUE`|
 |-|`Integer.MIN_VALUE`|
 |BigInteger|`BigInteger.ONE`|
+|-|`BigInteger.valueOf(Integer.MAX_VALUE)`|
 
 ```java
     // Initialize max with the smallest possible integer value
@@ -162,15 +225,6 @@ long sum = ar.stream().mapToLong(Long::longValue).sum();
 
 # MATH
 
-|Sign|Math|
-|---|---|
-|recursive|递归|
-|adjacent|邻接|
-|square| `Math.sqrt()`|
-|factorial|阶乘 |
-|diagonal|对角线|
-|`int remainder = dividend % divisor;`|取余|
-|The `k`th Factor of n| `k` 因数 / 因子|
 
 
 
@@ -208,6 +262,20 @@ Find the most frequent number in a list
 
         // Output the most frequent number
         System.out.println("The most frequent number is: " + mostFrequent);
+```
+
+```java
+        // Use a map to count the frequency of each number
+        Map<Integer, Long> frequencyMap = numbers.stream()
+            .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
+
+        // Find the entry with the maximum frequency
+        int mostFrequent = frequencyMap.entrySet()
+            .stream()
+            .max(Map.Entry.comparingByValue())
+            .get()
+            .getKey();
+
 ```
 
 # Transform

@@ -1,4 +1,4 @@
-package book.dp;
+package dp;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ public class MinCostTickets {
         int[] dp = new int[MAXN];
         int n = days.length;
 
-        Arrays.fill(dp, 0, n, Integer.MAX_VALUE);
+        Arrays.fill(dp, Integer.MAX_VALUE);
         
         dp[n]=0;
 

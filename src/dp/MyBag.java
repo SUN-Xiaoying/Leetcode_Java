@@ -1,4 +1,4 @@
-package dynamic;
+package dp;
 
 public class MyBag {
     public static void main(String[] args) {

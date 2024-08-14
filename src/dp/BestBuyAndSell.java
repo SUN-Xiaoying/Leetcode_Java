@@ -1,6 +1,5 @@
-package dynamic;
+package dp;
 
-import java.util.Arrays;
 
 public class BestBuyAndSell {
     public int maxProfit(int[] prices) {
