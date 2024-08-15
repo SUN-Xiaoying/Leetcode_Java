@@ -14,8 +14,11 @@
 
 Two-dimensional dynamic programming from recursion
 
+# Math
+
 |Sign|Math|
 |---|---|
+|exponent|指数|
 |recursive|递归|
 |adjacent|邻接|
 |square| `Math.sqrt()`|
@@ -24,6 +27,31 @@ Two-dimensional dynamic programming from recursion
 |`int remainder = dividend % divisor;`|取余|
 |The `k`th Factor of n| `k` 因数 / 因子|
 |evenly divide|整除|
+
+指数
+
+```java
+double result = Math.pow(2, 3); // 2 raised to the power of 3
+System.out.println(result); // Output will be 8.0
+```
+
+开方
+
+```java
+int X = 16;
+double result = Math.sqrt(X);
+int result2 = (int) Math.sqrt(16); // Output will be 4
+System.out.println(result); // Output will be 4.0
+
+```
+
+
+```java
+
+Math.floor() <= i <= Math.ceil();
+```
+
+
 
 ## Structure
 
@@ -222,16 +250,6 @@ long sum = ar.stream().mapToLong(Long::longValue).sum();
 
 
 
-
-# MATH
-
-
-
-
-```java
-
-Math.floor() <= i <= Math.ceil();
-```
 
 
 
