@@ -1,4 +1,4 @@
-package aws.sliding;
+package sliding;
 
 // https://leetcode.com/problems/gas-station/description/
 public class GasStation {

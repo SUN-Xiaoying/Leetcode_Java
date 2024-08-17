@@ -1,4 +1,4 @@
-package aws.sliding;
+package sliding;
 
 public class MinWindowSubString {
     public String minWindow(String s, String t) {

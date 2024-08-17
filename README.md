@@ -10,7 +10,7 @@
 |Partial|局部|partial search|
 |Palindrome|回文|
 |Deformity|变形|
-|||
+|Nested|嵌套|
 
 Two-dimensional dynamic programming from recursion
 

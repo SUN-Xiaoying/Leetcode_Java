@@ -1,4 +1,4 @@
-package aws.sliding;
+package sliding;
 
 import java.util.*;
 

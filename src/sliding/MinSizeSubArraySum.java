@@ -1,4 +1,4 @@
-package aws.sliding;
+package sliding;
 
 public class MinSizeSubArraySum {
     // mine
