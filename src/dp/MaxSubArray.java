@@ -1,12 +1,9 @@
 package dp;
 
-import java.util.Arrays;
-
 public class MaxSubArray {
 
     public static void main(String[] args) {
         int[] nums={5,4,-1,7,8};
-        int result = 23;
         System.out.println(maxSubArray(nums));
     }
 

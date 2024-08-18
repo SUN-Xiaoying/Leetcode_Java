@@ -1,8 +1,5 @@
 package dp;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Adjacent {
     public static void main(String[] args) {
         int[] nums={2,7,9,3,1};
