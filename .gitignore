@@ -1,8 +1,12 @@
 ### JetBrains IDEs:
-.idea
+.idea/
+.vscode/
 *.iml
 *.ipr
 *.iws
+out/
+target/
+*/target/
 
 ### Eclipse IDE:
 .settings/
@@ -24,11 +28,6 @@ project/target/
 target/bt
 dist/
 
-# JetBrains IDE
-.idea/
-out/
-target/
-*/target/
 ### JIRA plugin
 atlassian-ide-plugin.xml
 
