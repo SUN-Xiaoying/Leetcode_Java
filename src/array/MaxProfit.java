@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 public class MaxProfit {
     public static void main(String[] args) {
         int[] prices = {7, 1, 5, 3, 6, 4};
