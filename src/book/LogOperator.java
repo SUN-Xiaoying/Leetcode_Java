@@ -13,7 +13,7 @@ public class LogOperator {
     }
 
     public static void main(String[] args) {
-        int[] radomArr = generateRandomArray(10, 100);
+        
 
     }
 }
