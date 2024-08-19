@@ -1,7 +1,9 @@
 package book;
 
-import java.util.*;
-import java.util.stream.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ThreeDSurfaceArea {
 
@@ -173,8 +175,6 @@ public class ThreeDSurfaceArea {
         //     }
         // });
 
-        int H=3;
-        int W=3;
         List<List<Integer>> A = new ArrayList<>();
 
         A.add(Arrays.asList(1,3,4));

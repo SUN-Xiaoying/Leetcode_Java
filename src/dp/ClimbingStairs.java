@@ -3,10 +3,46 @@ package dp;
 import java.util.HashMap;
 import java.util.Map;
 
+// https://leetcode.com/problems/climbing-stairs/
 public class ClimbingStairs {
+    // Bring the CACHE
+    // ChatGPT 0ms Beats 100.00%
 
-    // https://www.cnblogs.com/Kevinmanlee/p/11110771.html
-    public int climbStairs(int n) {
+    public static int climbStairs(int n) {
+        if(n<0) {
+            return 0;
+        } 
+        if(n==0 || n==1 || n==2 || n==3){
+            return n;
+        }
+
+        int[] dp= new int[n+1];
+        dp[0]=0;
+        dp[1]=1;
+        dp[2]=2;
+        dp[3]=3;
+
+        for(int i=4; i<=n; i++){
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+
+        return dp[n];
+    }
+    
+    // 31 / 45 testcases passed, pround of you!
+    public int mine(int n) {
+        if(n<0) {
+            return 0;
+        } 
+        if(n==0 || n==1 || n==2 || n==3){
+            return n;
+        }
+        // termination
+        return mine(n-1) + mine(n-2);
+        
+    }
+
+    public int climbStairs_old(int n) {
         if(n<3){
             return n;
         }
@@ -40,4 +76,8 @@ public class ClimbingStairs {
     }
 
 
+    public static void main(String[] args) {
+        int n=5;
+        System.out.println(climbStairs(n));
+    }
 }
