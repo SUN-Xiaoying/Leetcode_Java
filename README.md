@@ -16,15 +16,18 @@ Two-dimensional dynamic programming from recursion
 
 # Math
 
-|Sign|Math|
-|---|---|
+|Sign|Math||
+|---|---|----|
+|Greatest Common Divisor|最大公约数|`gcd(a,b){return b==0 ? a : gcd(b, a%b)}`|
+|||// a>b, O(loga^3)|
+|Least Common Multiple|最小公倍数|`(a/gcd)*b`|
 |exponent|指数|
 |recursive|递归|
 |adjacent|邻接|
 |square| `Math.sqrt()`|
 |factorial|阶乘 |
 |diagonal|对角线|
-|`int remainder = dividend % divisor;`|取余|
+|` modulus`|取余|`%`|
 |The `k`th Factor of n| `k` 因数 / 因子|
 |evenly divide|整除|
 
