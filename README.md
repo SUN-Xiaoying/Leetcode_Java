@@ -11,13 +11,14 @@
 |Palindrome|回文|
 |Deformity|变形|
 |Nested|嵌套|
+|Permutation|排列|
 
 Two-dimensional dynamic programming from recursion
 
 # Math
 
 |Sign|Math||
-|---|---|----|
+|:---:|:---:|:----:|
 |Greatest Common Divisor|最大公约数|`gcd(a,b){return b==0 ? a : gcd(b, a%b)}`|
 |||// a>b, O(loga^3)|
 |Least Common Multiple|最小公倍数|`(a/gcd)*b`|
@@ -30,6 +31,10 @@ Two-dimensional dynamic programming from recursion
 |` modulus`|取余|`%`|
 |The `k`th Factor of n| `k` 因数 / 因子|
 |evenly divide|整除|
+|-|-|-|
+|parity|奇偶||
+|even|偶数||
+|odd|奇数||
 
 指数
 
@@ -54,6 +59,11 @@ System.out.println(result); // Output will be 4.0
 Math.floor() <= i <= Math.ceil();
 ```
 
+# Complexity
+|Sign|Math||
+|---|---|----|
+|`Arrays.sort(int[] nums)`|`O(nlog(n))`|Dual-Pivot Quicksort algorithm|
+|` Collections.sort(List<Integer> list)`|`O(n log n)`|Timsort algorithm|
 
 
 ## Structure
