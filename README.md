@@ -63,7 +63,8 @@ Math.floor() <= i <= Math.ceil();
 |Sign|Math||
 |---|---|----|
 |`Arrays.sort(int[] nums)`|`O(nlog(n))`|Dual-Pivot Quicksort algorithm|
-|` Collections.sort(List<Integer> list)`|`O(n log n)`|Timsort algorithm|
+|`Arrays.binarySearch(int[], int)`|`O(logn)`| If num not exists, the value returned is `-(insertion point) - 1`|
+|`Collections.sort(List<Integer> list)`|`O(n log(n))`|Timsort algorithm|
 
 
 ## Structure
