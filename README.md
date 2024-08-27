@@ -19,8 +19,7 @@ Two-dimensional dynamic programming from recursion
 
 |Sign|Math||
 |:---:|:---:|:----:|
-|Greatest Common Divisor|最大公约数|`gcd(a,b){return b==0 ? a : gcd(b, a%b)}`|
-|||// a>b, O(loga^3)|
+|Greatest Common Divisor|最大公约数|`gcd(a,b){return b==0 ? a : gcd(b, a%b)}`, **a>b**|
 |Least Common Multiple|最小公倍数|`(a/gcd)*b`|
 |exponent|指数|
 |recursive|递归|
@@ -65,6 +64,7 @@ Math.floor() <= i <= Math.ceil();
 |`Arrays.sort(int[] nums)`|`O(nlog(n))`|Dual-Pivot Quicksort algorithm|
 |`Arrays.binarySearch(int[], int)`|`O(logn)`| If num not exists, the value returned is `-(insertion point) - 1`|
 |`Collections.sort(List<Integer> list)`|`O(n log(n))`|Timsort algorithm|
+||`O(loga^3)`||
 
 
 ## Structure
@@ -75,11 +75,6 @@ Math.floor() <= i <= Math.ceil();
 |Stack|栈|First In, Last Out||
 |LinkedList|链表||
 |Binary Tree|二叉树||
-
-BT
-```java
-
-```
 
 Stack
 ```java
@@ -222,21 +217,14 @@ Intiate Matrix in a brutal way
 
 # ARRAY
 
-||`Arrays.asList()`|
+|||
 |----|----|
+||`Arrays.asList()`|
 ||`Arrays.sort()`|
 ||`Arrays.fill()`|
-||`Arrays.stream(dp).sum()`|
-
-## Sort
-
-```java
-    List<Integer> arr;
-    Collections.sort(arr);
-
-    // Sort the list in descending order
-    Collections.sort(arr, Collections.reverseOrder());
-```
+|`int[] num`|`Arrays.stream(nums).sum()`|
+|`List<Integer> arr`|`Collections.sort(arr);`|
+||`Collections.sort(arr, Collections.reverseOrder());`|
 
 
 
@@ -406,11 +394,12 @@ char in String
 
 ## MID
 
-左加(右减左>>1)
 
 ```java
-    int mid=left+((right-left)>>1);
+    int mid=l+((r-l)>>1);
 ```
+
+If you use `l+(r-l)>>1`, youwill get WRONG answer
 
 ## SWAP
 
@@ -424,13 +413,6 @@ I J I
     }
 ```
 > 字符串就不可哦! char[]
-
-## Array
-
-```java
-      List<Integer> arr;
-      Collections.sort(arr);
-```
 
 ### REVERSE
 ```java
