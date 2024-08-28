@@ -67,7 +67,7 @@ Math.floor() <= i <= Math.ceil();
 ||`O(loga^3)`||
 
 
-## Structure
+# Structure
 
 |Structure|-|Rule||
 |----|----|----|----|
@@ -76,20 +76,43 @@ Math.floor() <= i <= Math.ceil();
 |LinkedList|链表||
 |Binary Tree|二叉树||
 
-Stack
-```java
-Stack<Integer> stack = new Stack<>();
-stack.push(10);
 
-// Retrieve the top element of the stack without removing it.
-stack.peek();
+## ARRAY
 
-// Retrieve the top element of the stack and REMOVE it.
-stack.pop();
+|||
+|----|----|
+||`Arrays.asList()`|
+||`Arrays.sort()`|
+||`Arrays.fill()`|
+|`int[] num`|`Arrays.stream(nums).sum()`|
+|`List<Integer> arr`|`Collections.sort(arr);`|
+||`Collections.sort(arr, Collections.reverseOrder());`|
 
-stack.isEmpty();
+## String
 
-```
+|Operations|String||
+|---|---|----|
+|子串|`str.substring(start , end);` |endPosition=str.length() by default|
+|空|`str == null` || `str.isEmpty()`|
+|包含|`str.contains(string)`|`str.contains(String.valueOf(char))`|
+|取数|`str.indexOf(charValue);`||
+|取字|`str.charAt(index);` |not `getChar`|
+|Discompose|`str.toCharArray()`|
+
+
+
+## STACK
+
+|Opeartion|Stack||
+|---|---|----|
+||`Stack<Integer> stack = new Stack<>()` ||
+||`stack.contains()`||
+|空|`stack.isEmpty()`||
+||`stack.push(num)`||
+|Retrieve the top element of the stack WITHOUT removing it|`stack.peek()` ||
+|Retrieve the top element of the stack and REMOVE it|`stack.pop()`||
+||`stack.get(index)`||
+
 
 Queue
 
@@ -215,18 +238,6 @@ Intiate Matrix in a brutal way
 
 # SUM
 
-# ARRAY
-
-|||
-|----|----|
-||`Arrays.asList()`|
-||`Arrays.sort()`|
-||`Arrays.fill()`|
-|`int[] num`|`Arrays.stream(nums).sum()`|
-|`List<Integer> arr`|`Collections.sort(arr);`|
-||`Collections.sort(arr, Collections.reverseOrder());`|
-
-
 
 ## Sum of the List
 
@@ -332,29 +343,6 @@ Find the most frequent number in a list
 
 
 
-
-# String
-
-||||
-|---|---|----|
-|子串|`str.substring(start , end);` |endPosition=str.length() by default|
-|取数|`str.indexOf(charValue);`||
-|取字|`str.charAt(index);` |not `getChar`|
-|Discompose|`str.toCharArray()`|
-
-## SubString
-```java
-    str.substring( startPosition, endPosition );
-```
-
-```java
-    if (subString.contains(String.valueOf(c))) { // Check if subString contains the character c
-        subString = String.valueOf(c); // Assign the character to subString
-        result++; // Increment the result counter
-    }
-```
-
-
 ### TimeFormat
 
 12 hour to 24 hour.
@@ -399,7 +387,7 @@ char in String
     int mid=l+((r-l)>>1);
 ```
 
-If you use `l+(r-l)>>1`, youwill get WRONG answer
+If you use `l+(r-l)>>1`, you will get WRONG answer
 
 ## SWAP
 
