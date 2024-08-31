@@ -1,4 +1,4 @@
-package google;
+package recursion.powersum;
 
 // https://leetcode.com/problems/power-of-two/
 

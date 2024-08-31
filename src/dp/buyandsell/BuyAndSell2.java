@@ -1,4 +1,4 @@
-package google;
+package dp.buyandsell;
 
 public class BuyAndSell2 {
     // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/

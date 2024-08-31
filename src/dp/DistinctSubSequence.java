@@ -1,4 +1,4 @@
-package dp.oned;
+package dp;
 
 public class DistinctSubSequence {
     

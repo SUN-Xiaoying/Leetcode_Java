@@ -1,4 +1,4 @@
-package recursion;
+package permutation;
 
 import java.util.ArrayList;
 import java.util.Arrays;

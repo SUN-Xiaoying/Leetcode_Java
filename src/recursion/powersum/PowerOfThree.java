@@ -1,4 +1,4 @@
-package google;
+package recursion.powersum;
 
 // https://leetcode.com/problems/power-of-three/description/
 
@@ -6,7 +6,7 @@ public class PowerOfThree {
 
     // 8ms Beats 88.50%
     public boolean isPowerOfThreeRecursion(int n) {
-        if(n<=0){
+        if(n==0){
             return false;
         }
 

@@ -1,4 +1,4 @@
-package dp;
+package dp.buyandsell;
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
 public class BuyAndSellCooldown {
