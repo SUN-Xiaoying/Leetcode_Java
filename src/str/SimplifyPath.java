@@ -56,7 +56,7 @@ public class SimplifyPath {
     }
 
     public static void main(String[] args) {
-        String path = "/.../a/../b/c/../d/./";
+        // String path = "/.../a/../b/c/../d/./";
         String path1="/home/user/Documents/../Pictures";
         System.out.println(simplifyPath(path1));
     }

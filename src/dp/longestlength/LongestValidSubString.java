@@ -1,4 +1,4 @@
-package str;
+package dp.longestlength;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,8 +32,6 @@ public class LongestValidSubString {
     }
 
     public static void main(String[] args) {
-        String word = "leetcode";
-        String word1 = "cbaaaabc";
         List<String> forbidden = new ArrayList<String>();
         // forbidden.add("de");
         // forbidden.add("le");

@@ -21,6 +21,7 @@ Two-dimensional dynamic programming from recursion
 |:---:|:---:|:----:|
 |Greatest Common Divisor|最大公约数|`gcd(a,b){return b==0 ? a : gcd(b, a%b)}`, **a>b**|
 |Least Common Multiple|最小公倍数|`(a/gcd)*b`|
+|Divisible by either `a` or `b`|除或|`m/a + m/b - m/lcm`|
 |exponent|指数|
 |recursive|递归|
 |adjacent|邻接|
@@ -87,6 +88,8 @@ Math.floor() <= i <= Math.ceil();
 |`int[] num`|`Arrays.stream(nums).sum()`|
 |`List<Integer> arr`|`Collections.sort(arr);`|
 ||`Collections.sort(arr, Collections.reverseOrder());`|
+|int[] nums, int target|`Arrays.binarySearch(num, target)`|
+|-|If not exists, -(insertion point) - 1|
 
 ## String
 
@@ -98,7 +101,6 @@ Math.floor() <= i <= Math.ceil();
 |取数|`str.indexOf(charValue);`||
 |取字|`str.charAt(index);` |not `getChar`|
 |Discompose|`str.toCharArray()`|
-
 
 
 ## STACK
