@@ -1,4 +1,4 @@
-package permutation;
+package dp.permutation;
 
 import java.util.ArrayList;
 import java.util.Arrays;

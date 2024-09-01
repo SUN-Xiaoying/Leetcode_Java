@@ -1,4 +1,4 @@
-package combination;
+package recursion.combination;
 
 import java.util.ArrayList;
 import java.util.Arrays;

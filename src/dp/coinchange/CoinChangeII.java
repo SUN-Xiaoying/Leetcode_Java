@@ -1,4 +1,4 @@
-package dp;
+package dp.coinchange;
 
 import java.util.Arrays;
 
