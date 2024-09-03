@@ -2,7 +2,7 @@ package sliding;
 
 import java.util.*;
 
-public class MaxLenSubStringWithoutRepeat {
+public class LongestSubstrWithoutRepeat {
     public int lengthOfLongestSubstring(String s) {
         char[] charList = s.toCharArray();
         Map<Character, Integer> map = new HashMap<>();

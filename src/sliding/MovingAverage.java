@@ -1,4 +1,4 @@
-package klarna;
+package sliding;
 
 // ToDo: NOT ALL PASS
 class MovingAverage {

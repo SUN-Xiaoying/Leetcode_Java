@@ -12,6 +12,7 @@
 |Deformity|变形|
 |Nested|嵌套|
 |Permutation|排列|
+|Divide and conquer|分而治之|
 
 Two-dimensional dynamic programming from recursion
 
@@ -38,6 +39,11 @@ Two-dimensional dynamic programming from recursion
 |odd|奇数||
 |denominator|分母||
 
+||||
+|---|---|---|
+|向上取整|`Math.ceil((double) n / m)`|`(n + m - 1) / m`|
+|向下取整|`Math.floor((double) n / m)`||
+
 
 ```java
 
@@ -52,7 +58,7 @@ Math.floor() <= i <= Math.ceil();
 |`l + (r-l)/2`|mid|`l+((r−l)>>>1)`|take account for overflow|
 
 # Complexity
-|Sign|Math||
+|Sign|Complexity||
 |---|---|----|
 |`Arrays.sort(int[] nums)`|`O(nlog(n))`|Dual-Pivot Quicksort algorithm|
 |`Arrays.binarySearch(int[], int)`|`O(logn)`| If num not exists, the value returned is `-(insertion point) - 1`|
@@ -72,59 +78,72 @@ Math.floor() <= i <= Math.ceil();
 
 ## ARRAY
 
-|||
-|----|----|
+||||
+|----|----|----|
 ||`Arrays.asList()`|
 ||`Arrays.sort()`|
 ||`Arrays.fill()`|
 |`int[] num`|`Arrays.stream(nums).sum()`|
 |`List<Integer> arr`|`Collections.sort(arr);`|
 ||`Collections.sort(arr, Collections.reverseOrder());`|
+|Subarray|`Arrays.copyOfRange(nums, l, r)`| indices l and r - 1|
 |int[] nums, int target|`Arrays.binarySearch(num, target)`|
 |-|If not exists, -(insertion point) - 1|
 
-## String
+## STRING
 
 |Operations|String||
 |---|---|----|
 |子串|`str.substring(start , end);` |endPosition=str.length() by default|
 |空|`str == null` || `str.isEmpty()`|
 |包含|`str.contains(string)`|`str.contains(String.valueOf(char))`|
-|取数|`str.indexOf(charValue);`||
+|取数|`str.indexOf(charValue);`| does not exist return -1|
 |取字|`str.charAt(index);` |not `getChar`|
 |Discompose|`str.toCharArray()`|
 
 
+||`str = null`|`str = ""`|
+|---|---|---|
+|Memory|No memory is allocated|Memory is allocated for an empty string|
+|`str.length()`| throws **NullPointerException**|return `0`|
+|`str.isEmpty()`|throws **NullPointerException**|return `true`|
+
+
+
 ## STACK
 
-|Opeartion|Stack||
-|---|---|----|
-||`Stack<Integer> stack = new Stack<>()` ||
-||`stack.contains()`||
-|空|`stack.isEmpty()`||
-||`stack.push(num)`|`stack.add(num)`|
-|Retrieve the top element of the stack WITHOUT removing it|`stack.peek()` ||
-|Retrieve the top element of the stack and REMOVE it|`stack.pop()`||
-||`stack.get(index)`||
+|Opeartion|Stack|
+|---|----|
+|`Stack<Integer> stack = new Stack<>()`||
+|`stack.contains()`||
+|`stack.isEmpty()`|空|
+|`stack.push(num)`|`stack.add(num)`|
+|`stack.peek()`|Retrieve the top element of the stack WITHOUT removing it|
+|`stack.pop()`|Retrieve the top element of the stack and REMOVE it|
+|`stack.get(index)`||
 
 >  `push()` is used specifically with stacks, ensuring that the LIFO order is respected. `add()` is a more general method that can be used with various types of collections.
 
-Queue
+## QUEUE
+
+|Opeartion|Stack|
+|---|----|
+|`Queue<Integer> queue = new LinkedList<>()`||
+|`queue.offer(num)`||
+|`queue.peek()`||
+|`queue.poll()`||
+|`queue.isEmpty()`||
+
+
 
 ```java
-Queue<Integer> queue = new LinkedList<>();
 
 // Elements will be ordered in natural order (ascending for numbers)
 Queue<Integer> queue = new PriorityQueue<>();
 
-
-queue.offer(10);
-queue.peek();
-queue.poll();
-queue.isEmpty();
 ```
 
-Deque
+### Deque
 
 ```java
   public Deque<Integer> deque = new LinkedList<>();
