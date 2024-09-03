@@ -25,39 +25,31 @@ Two-dimensional dynamic programming from recursion
 |exponent|指数|
 |recursive|递归|
 |adjacent|邻接|
-|square| `Math.sqrt()`|
+|exponent|指数|`Math.pow(2, 3) == 8`|
+|square|开方|`Math.sqrt(16) == 4`|
 |factorial|阶乘 |
 |diagonal|对角线|
 |` modulus`|取余|`%`|
 |The `k`th Factor of n| `k` 因数 / 因子|
-|evenly divide|整除|
+|evenly divide|整除||
 |-|-|-|
 |parity|奇偶||
 |even|偶数||
 |odd|奇数||
-
-指数
-
-```java
-double result = Math.pow(2, 3); // 2 raised to the power of 3
-System.out.println(result); // Output will be 8.0
-```
-
-开方
-
-```java
-int X = 16;
-double result = Math.sqrt(X);
-int result2 = (int) Math.sqrt(16); // Output will be 4
-System.out.println(result); // Output will be 4.0
-
-```
+|denominator|分母||
 
 
 ```java
 
 Math.floor() <= i <= Math.ceil();
 ```
+
+## BIT OPERATION
+|MATH||BIT||
+|---|---|---|---|
+|`y % 2 != 0`|odd|`(y & 1) == 1`||
+|`y = y / 2;`|divide 2|`y >>= 1`||
+|`l + (r-l)/2`|mid|`l+((r−l)>>>1)`|take account for overflow|
 
 # Complexity
 |Sign|Math||
@@ -110,11 +102,12 @@ Math.floor() <= i <= Math.ceil();
 ||`Stack<Integer> stack = new Stack<>()` ||
 ||`stack.contains()`||
 |空|`stack.isEmpty()`||
-||`stack.push(num)`||
+||`stack.push(num)`|`stack.add(num)`|
 |Retrieve the top element of the stack WITHOUT removing it|`stack.peek()` ||
 |Retrieve the top element of the stack and REMOVE it|`stack.pop()`||
 ||`stack.get(index)`||
 
+>  `push()` is used specifically with stacks, ensuring that the LIFO order is respected. `add()` is a more general method that can be used with various types of collections.
 
 Queue
 

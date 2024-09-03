@@ -1,6 +1,6 @@
-package recursion.powersum;
+package recursion.powerofn;
 
-// https://www.hackerrank.com/challenges/the-power-sum/problem?isFullScreen=true
+// https://www.hackerrank.com/challenges/the-power-sum
 public class PowerSum {
     public static int mine(int X, int N) {
         // Write your code here
