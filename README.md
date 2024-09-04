@@ -38,6 +38,7 @@ Two-dimensional dynamic programming from recursion
 |even|偶数||
 |odd|奇数||
 |denominator|分母||
+|perimeter|周长||
 
 ||||
 |---|---|---|
