@@ -1,4 +1,4 @@
-package grid;
+package grid.island;
 
 /*
  * https://leetcode.com/problems/island-perimeter/description/

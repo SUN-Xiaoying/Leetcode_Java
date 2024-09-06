@@ -12,7 +12,9 @@
 |Deformity|变形|
 |Nested|嵌套|
 |Permutation|排列|
+|----|----|----|
 |Divide and conquer|分而治之|
+|Subarray|Must be a continuous (contiguous) part of an array|
 
 Two-dimensional dynamic programming from recursion
 
@@ -110,7 +112,6 @@ Math.floor() <= i <= Math.ceil();
 |`str.isEmpty()`|throws **NullPointerException**|return `true`|
 
 
-
 ## STACK
 
 |Opeartion|Stack|
@@ -125,9 +126,22 @@ Math.floor() <= i <= Math.ceil();
 
 >  `push()` is used specifically with stacks, ensuring that the LIFO order is respected. `add()` is a more general method that can be used with various types of collections.
 
+## MAP
+|Opeartion|Map|
+|---|----|
+|`Map<Integer, Integer> map = new HashMap<>()`||
+|`put(K key, V value)`||
+|`get(Object key)`||
+|`remove(Object key)`||
+|`size()`||
+|`isEmpty()`||
+|`containsKey(Object key)`||
+|`containsValue(Object value)`||
+
+
 ## QUEUE
 
-|Opeartion|Stack|
+|Opeartion|Queue|
 |---|----|
 |`Queue<Integer> queue = new LinkedList<>()`||
 |`queue.offer(num)`||
@@ -152,6 +166,8 @@ Queue<Integer> queue = new PriorityQueue<>();
   deque.offerFirst();
   deque.offerLast();
 ```
+
+
 
 
 # Init
@@ -219,9 +235,22 @@ Intiate Matrix in a brutal way
 
   Set<> set = new HashSet<>();
 
-  Map<Integer, Integer> map = new HashMap<>();
+ 
 
 ```
+
+
+# MinMax
+
+|Symbol|Value|
+|----|----|
+|`Integer.MAX_VALUE`||
+|`Integer.MIN_VALUE`|-2,147,483,648|
+|`Integer.ONE`|1|
+|----|----|
+|`BigInteger.ONE`||
+|`BigInteger.valueOf(Integer.MAX_VALUE)`||
+
 ### BigInteger
 
   Factorials of n>20 cannot be stored even in a 64-bit long long variable. BigIntger must be used.
@@ -235,22 +264,6 @@ Intiate Matrix in a brutal way
         }
     }
 ```
-
-## MinMax
-
-|||
-|----|----|
-|int|`Integer.MAX_VALUE`|
-|-|`Integer.MIN_VALUE`|
-|BigInteger|`BigInteger.ONE`|
-|-|`BigInteger.valueOf(Integer.MAX_VALUE)`|
-
-```java
-    // Initialize max with the smallest possible integer value
-    int max = Integer.MIN_VALUE;
-```
-
-
 # SUM
 
 
