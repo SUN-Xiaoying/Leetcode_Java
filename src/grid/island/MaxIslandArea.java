@@ -7,13 +7,17 @@ package grid.island;
 public class MaxIslandArea {
     //2ms Beats 67.68%
     public int maxAreaOfIsland(int[][] grid) {
+        // line from ChatGPT
+        if (grid == null || grid.length == 0) return 0;
+
         int ROW = grid.length;
         int COL = grid[0].length;
         boolean[][] visited = new boolean[ROW][COL];
         int max_area = Integer.MIN_VALUE;
         for(int i=0; i<ROW; i++){
             for(int j=0; j<COL; j++){
-                if (!visited[i][j]) { // Check if the cell is already visited
+                // line from ChatGPT
+                if (grid[i][j] == 1 && !visited[i][j]) { 
                     max_area = Math.max(max_area, dfs(i, j, visited, grid));
                 }
             }

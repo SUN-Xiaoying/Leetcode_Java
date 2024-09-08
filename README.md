@@ -1,4 +1,52 @@
+- [Terminology](#terminology)
+- [Math](#math)
+  - [BIT OPERATION](#bit-operation)
+- [Complexity](#complexity)
+- [Structure](#structure)
+  - [ARRAY](#array)
+  - [Grid](#grid)
+  - [STRING](#string)
+  - [STACK](#stack)
+  - [MAP](#map)
+  - [QUEUE](#queue)
+    - [用数组实现Queue](#用数组实现queue)
+    - [Deque](#deque)
+- [Init](#init)
+  - [LIST](#list)
+    - [Java 8](#java-8)
+    - [Java 15](#java-15)
+- [MinMax](#minmax)
+    - [BigInteger](#biginteger)
+- [SUM](#sum)
+  - [Sum of the List](#sum-of-the-list)
+    - [Java 8](#java-8-1)
+    - [Java 15](#java-15-1)
+- [Stream](#stream)
+  - [MAP](#map-1)
+- [Transform](#transform)
+  - [Matrx to List](#matrx-to-list)
+  - [Map to List](#map-to-list)
+  - [Integer to str](#integer-to-str)
+    - [TimeFormat](#timeformat)
+- [LOOP](#loop)
+  - [FOR](#for)
+- [Sort](#sort)
+  - [MID](#mid)
+  - [SWAP](#swap)
+    - [REVERSE](#reverse)
+- [LinkedList](#linkedlist)
+  - [REVERSE](#reverse-1)
+  - [isPail](#ispail)
+- [ASCII](#ascii)
+- [葵花宝典](#葵花宝典)
+  - [1. 链表](#1-链表)
+    - [入环](#入环)
+    - [相交](#相交)
+    - [Palindrome](#palindrome)
 
+
+
+# Terminology
 |trie|前缀树|prefix/dictionary tree|
 |----|----|----|
 |2D square|正方形||
@@ -14,7 +62,7 @@
 |Permutation|排列|
 |----|----|----|
 |Divide and conquer|分而治之|
-|Subarray|Must be a continuous (contiguous) part of an array|
+|Subarray|Must be a **continuous (contiguous)** part of an array|
 
 Two-dimensional dynamic programming from recursion
 
@@ -66,7 +114,6 @@ Math.floor() <= i <= Math.ceil();
 |`Arrays.sort(int[] nums)`|`O(nlog(n))`|Dual-Pivot Quicksort algorithm|
 |`Arrays.binarySearch(int[], int)`|`O(logn)`| If num not exists, the value returned is `-(insertion point) - 1`|
 |`Collections.sort(List<Integer> list)`|`O(n log(n))`|Timsort algorithm|
-||`O(loga^3)`||
 
 
 # Structure
@@ -81,17 +128,32 @@ Math.floor() <= i <= Math.ceil();
 
 ## ARRAY
 
-||||
-|----|----|----|
-||`Arrays.asList()`|
-||`Arrays.sort()`|
-||`Arrays.fill()`|
-|`int[] num`|`Arrays.stream(nums).sum()`|
-|`List<Integer> arr`|`Collections.sort(arr);`|
-||`Collections.sort(arr, Collections.reverseOrder());`|
-|Subarray|`Arrays.copyOfRange(nums, l, r)`| indices l and r - 1|
-|int[] nums, int target|`Arrays.binarySearch(num, target)`|
-|-|If not exists, -(insertion point) - 1|
+|||
+|----|----|
+|`Arrays.asList()`|
+|`Arrays.sort()`|
+|`Arrays.fill()`|
+|`Arrays.stream(nums).sum()`|`int[] num`|
+|`Collections.sort(arr)`|`List<Integer> arr`|
+|`Collections.sort(arr, Collections.reverseOrder());`|
+|`Arrays.copyOfRange(nums, l, r)`|Subarray, indices l and r - 1|
+|`Arrays.binarySearch(num, target)`|If not exists, return `-(insertion point) - 1`|
+
+## Grid
+
+0: Up
+1: Right
+2: Down
+3: Left
+
+```java
+    int[] move = new int[] {-1, 0, 1, 0, -1};
+
+    x+move[i]
+    y+move[i+1]
+```
+
+
 
 ## STRING
 
@@ -143,20 +205,23 @@ Math.floor() <= i <= Math.ceil();
 
 |Opeartion|Queue|
 |---|----|
-|`Queue<Integer> queue = new LinkedList<>()`||
+|`Queue<Integer> queue = new LinkedList<Integer>()`||
+|`Queue<Integer> queue = new PriorityQueue<>()`|Elements will be ordered in ascending|
 |`queue.offer(num)`||
 |`queue.peek()`||
 |`queue.poll()`||
 |`queue.isEmpty()`||
 
+### 用数组实现Queue
 
-
-```java
-
-// Elements will be ordered in natural order (ascending for numbers)
-Queue<Integer> queue = new PriorityQueue<>();
-
-```
+|||
+|---|---|
+|[l, r)|`int[] queue`|
+|isEmpty()|`return l==r`|
+|add(num)|`queue[r++] == num`|
+|poll()|`return queue[l++]`|
+|head()|`return queue[l]`|
+|tail()|`return queue[r-1]`|
 
 ### Deque
 
@@ -294,7 +359,9 @@ long sum = ar.stream().mapToLong(Long::longValue).sum();
 
 
 
-# MAP
+# Stream
+
+## MAP
 
 Find the most frequent number in a list
 
