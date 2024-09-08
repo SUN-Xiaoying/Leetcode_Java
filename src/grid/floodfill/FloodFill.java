@@ -1,5 +1,8 @@
-package grid;
+package grid.floodfill;
 
+/*
+ * https://leetcode.com/problems/flood-fill/description/
+*/
 public class FloodFill {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
         if(color == image[sr][sc]){
