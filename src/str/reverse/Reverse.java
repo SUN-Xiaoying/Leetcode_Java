@@ -1,4 +1,6 @@
-package str;
+package str.reverse;
+
+import java.util.Stack;
 
 public class Reverse {
     public static void main(String[] args) {
@@ -11,17 +13,36 @@ public class Reverse {
 
     }
 
+    /*
+     * ChatGPT: 1ms Beats 24.50%
+    */
     public static void reverseString(char[] s) {
         // Seems to be no better way
-        int i = 0;
-        int j = s.length - 1;
+        int l = 0;
+        int r = s.length - 1;
         char ch;
-        while (i < j) {
-            ch = s[i];
-            s[i] = s[j];
-            s[j] = ch;
-            j--;
-            i++;
+        while (l < r) {
+            ch = s[l];
+            s[l] = s[r];
+            s[r] = ch;
+            r--;
+            l++;
+        }
+    }
+
+    /*
+     * 2024-09-09
+     * mine: 4ms
+    */
+    public void reverseString2(char[] s) {
+        Stack<Character> stack = new Stack<Character>();
+
+        for(char ch: s){
+            stack.add(ch);
+        }
+
+        for(int i=0; i<s.length; i++){
+            s[i] = stack.pop();
         }
     }
 
