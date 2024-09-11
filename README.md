@@ -131,7 +131,7 @@ Math.floor() <= i <= Math.ceil();
 |||
 |----|----|
 |`Arrays.asList()`|
-|`Arrays.sort()`|
+|`Arrays.sort()`|按字典序小排序, `Arrays.sort(strs, (a,b)->(a+b).compareTo(b+a))`|
 |`Arrays.fill()`|
 |`Arrays.stream(nums).sum()`|`int[] num`|
 |`Collections.sort(arr)`|`List<Integer> arr`|
@@ -157,15 +157,16 @@ Math.floor() <= i <= Math.ceil();
 
 ## STRING
 
-|Operations|String||
-|---|---|----|
-|子串|`str.substring(start , end);` |endPosition=str.length() by default|
-|空|`str == null` || `str.isEmpty()`|
-|包含|`str.contains(string)`|`str.contains(String.valueOf(char))`|
-|取数|`str.indexOf(charValue);`| does not exist return -1|
-|取字|`str.charAt(index);` |not `getChar`|
-|Discompose|`str.toCharArray()`|
-
+|Operations|String|
+|---|----|
+|`str.substring(start , end);` |endPosition=str.length() by default|
+|`str == null` || `str.isEmpty()`|
+|`str.contains(string)`||
+|`str.indexOf(char);`| does not exist return -1|
+|`str.charAt(index);` ||
+|`str.toCharArray()`|`String.valueOf(char)`|
+|**`str1.compareTo(str2)`**|"11:00".compareTo("14:00") == -3|
+|字典序|"abc".compareTo("b") == -1|
 
 ||`str = null`|`str = ""`|
 |---|---|---|
@@ -231,8 +232,6 @@ Math.floor() <= i <= Math.ceil();
   deque.offerFirst();
   deque.offerLast();
 ```
-
-
 
 
 # Init
