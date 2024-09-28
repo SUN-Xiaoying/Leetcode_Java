@@ -6,11 +6,15 @@
   - [ARRAY](#array)
   - [Grid](#grid)
   - [STRING](#string)
+  - [HASHSET, HASHMAP](#hashset-hashmap)
+  - [TREEMAP TREESET](#treemap-treeset)
+  - [HEAP](#heap)
   - [STACK](#stack)
   - [MAP](#map)
   - [QUEUE](#queue)
     - [用数组实现Queue](#用数组实现queue)
     - [Deque](#deque)
+- [Comparator](#comparator)
 - [Init](#init)
   - [LIST](#list)
     - [Java 8](#java-8)
@@ -149,10 +153,9 @@ Math.floor() <= i <= Math.ceil();
 ```java
     int[] move = new int[] {-1, 0, 1, 0, -1};
 
-    x+move[i]
+    x+move[i] 
     y+move[i+1]
 ```
-
 
 
 ## STRING
@@ -165,6 +168,7 @@ Math.floor() <= i <= Math.ceil();
 |`str.indexOf(char);`| does not exist return -1|
 |`str.charAt(index);` ||
 |`str.toCharArray()`|`String.valueOf(char)`|
+|`str1.equals(str2)`||
 |**`str1.compareTo(str2)`**|"11:00".compareTo("14:00") == -3|
 |字典序|"abc".compareTo("b") == -1|
 
@@ -173,6 +177,50 @@ Math.floor() <= i <= Math.ceil();
 |Memory|No memory is allocated|Memory is allocated for an empty string|
 |`str.length()`| throws **NullPointerException**|return `0`|
 |`str.isEmpty()`|throws **NullPointerException**|return `true`|
+
+```java
+String str1 = new String("Hello");
+String str2 = new String("Hello");
+```
+|`str1==str2`|`str1.equals(str2)`|
+|:---:|:---:|
+|false|true|
+
+## HASHSET, HASHMAP
+
+> HashMap和HashSet，增删改查, O(1)，但是大常数
+
+**Java中通过自定义hashCode、equals等方法
+任何类都可以实现“根据值做key”或者“根据内存地址做key”的需求**
+
+## TREEMAP TREESET
+有序表, ordered list
+
+> TreeSet和TreeMap原理一样，有无伴随数据的区别
+> 增删改查, O(logN)
+
+|Opeartion|TreeMap|
+|---|----|
+|`TreeMap<Integer, String> treeMap = new TreeMap<>()`||
+|`treeMap.getOrDefault(key, 0)`||
+|`treeMap.containsKey(key)`|not exists return null|
+|`treeMap.firstKey()`||
+|`treeMap.lastsKey()`||
+|`treeMap.floorKey(4)`|return cloest <=4|
+|`treeMap.ceilingKey(4)`|return cloest >=4|
+
+|Opeartion|TreeSet|
+|---|----|
+|`TreeSet<Integer, String> treeSet = new TreeSet<>()`||
+|`treeSet.pollFirst()`|1,2,3,4|
+|`treeSet.pollLast()`|4,3,2,1|
+
+## HEAP
+|Opeartion|Heap|
+|---|----|
+|`Queue<Integer> heap = new PriorityQueue<>()`|默认小根堆, min-heap, Elements will be ordered in ascending|
+|`heap.size()`||
+|`heap.poll()`||
 
 
 ## STACK
@@ -220,7 +268,7 @@ Math.floor() <= i <= Math.ceil();
 |[l, r)|`int[] queue`|
 |isEmpty()|`return l==r`|
 |add(num)|`queue[r++] == num`|
-|poll()|`return queue[l++]`|
+|poll|`return queue[l++]`|
 |head()|`return queue[l]`|
 |tail()|`return queue[r-1]`|
 
@@ -233,6 +281,23 @@ Math.floor() <= i <= Math.ceil();
   deque.offerLast();
 ```
 
+# Comparator
+
+`compare(Object o1, Object o2)`
+返回负数默认 o1 小
+返回正数默认 o2 小
+
+```java
+// return in an ascending order
+// 字典序从小到大
+Arrays.sort(strs, (a,b)->(a+b).comparesTo(b+a)); 
+
+// 年龄较大的往前排
+Arrays.sort(arr, (a,b) -> b.age -a.age); 
+
+// 公司编号小的先来，年纪大的先来
+Arrays.sort(arr, (a,b) -> (a.company!=b.company) ? a.comapny-b.company : b.age-a.age);
+```
 
 # Init
 

@@ -1,4 +1,4 @@
-package mycanlender;
+package greedy.mycanlender;
 
 /*
  * https://leetcode.com/problems/determine-if-two-events-have-conflict/description/
